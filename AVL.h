@@ -503,7 +503,7 @@ typename AVL<Key, T>::Node* AVL<Key, T>::Node::copyNodes(Node* father) const {
     if (rightSon) {
         newNode->rightSon = rightSon->copyNodes(newNode);
     }
-	newNode->updateHeight();
+    newNode->updateHeight();
     return newNode;
 }
 
@@ -548,7 +548,7 @@ bool AVL<Key, T>::Node::validateBF() const {
 template<class Key, class T>
 class AVL<Key, T>::Iterator {
 public:
-	//throws ELEMENT_NOT_FOUND if current==NULL
+    //throws ELEMENT_NOT_FOUND if current==NULL
     T& operator*() const;
 
     bool operator==(const Iterator& iterator2) const;
